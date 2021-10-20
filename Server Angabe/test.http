@@ -1,0 +1,33 @@
+GET http://127.0.0.1:3000/cars
+###
+GET http://127.0.0.1:3000/cars/2
+###
+DELETE http://localhost:3000/carsssss/2
+###
+DELETE http://localhost:3000/cars/22
+###
+DELETE http://127.0.0.1:3000/cars/1
+###
+POST http://localhost:3000/cars
+Content-Type: application/json
+
+{
+"title": "Rare Oldtimer",
+"status": "available",
+"price": "52300",
+"image": "http://localhost:3000/images/car10.png",
+"miles": 189921,
+"yearOfMake": 1978,
+"owner": {
+"firstName": "Mina",
+"lastName": "Mansour"
+},
+"description": "Excellent condition. A trip back in time!"
+}
+###
+PATCH http://localhost:3000/cars/2
+Content-Type: application/json
+
+{
+"status": "available"
+}
